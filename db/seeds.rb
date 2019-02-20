@@ -10,7 +10,7 @@ puts "Cleaning database"
 Restaurant.destroy_all
 
 puts "Creating restaurants..."
-restaurants_attributes = [
+restaurants = [
   {
     name: 'Something & Something',
     address: '84 Finsbury Park',
@@ -38,7 +38,14 @@ restaurants_attributes = [
   {
     name: 'Maki Maki',
     address: '45 English Road',
-    category: 'japanse',
+    category: 'japanese',
     phone_number: '07 90 34 75 12'
   }
 ]
+
+# use the ! to force it to do it
+Restaurant.create!(restaurants)
+puts "Finished, go on and test"
+
+
+
