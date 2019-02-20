@@ -1,5 +1,7 @@
 class Restaurant < ApplicationRecord
   #if we delete this restaurant, this will delete the associated reviews
+  CATEGORIES = %w(chinese italian japanese french belgian)
+
   has_many :reviews, dependent: :destroy
   validates :name, uniqueness: true, presence: true
   validates :phone_number, presence: true

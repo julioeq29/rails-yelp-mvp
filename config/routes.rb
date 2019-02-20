@@ -4,7 +4,7 @@ Rails.application.routes.draw do
    # A visitor can add a new review to a restaurant
   resources :restaurants, only: [ :index, :new, :show, :create ] do
     # No need for :new, as i dont need a new page to create a review
-    resources :reviews, only: [ :create ]
+    resources :reviews, only: [ :new, :create ]
   end
 
 end
